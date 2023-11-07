@@ -1,0 +1,30 @@
+@mixin media($size) {
+    @if $size == 1200 {
+        @media(max-width: 1200px) {
+            @content
+        }
+    };
+    @if $size == 900 {
+        @media(max-width: 900px) {
+            @content
+        }
+    };
+
+    @if $size == 700 {
+        @media(max-width: 700px) {
+            @content
+        }
+    };
+
+    @if $size == 600 {
+        @media(max-width: 600px) {
+            @content
+        }
+    };
+
+    @if $size == 480 {
+        @media(max-width: 480px) {
+            @content
+        }
+    };
+}

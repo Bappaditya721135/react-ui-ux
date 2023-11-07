@@ -1,0 +1,193 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: $second;
+    border-radius: 0 0 20rem 20rem;
+    
+    main {
+        @include flex(center, flex-end);
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        color: $first;
+        padding: 10rem;
+        position: relative;
+        z-index: 1;
+        // MEDIA QUERY 
+        @include media(600) {
+            align-items: center;
+        }
+
+        h1 {
+            font: 400 8rem "Roboto";
+            @include media(600) {
+                font-size: 6rem;
+            }
+        }
+        p {
+            font: 900 2rem "Roboto";
+            @include media(600) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/homebackground.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(2px);
+        border-radius: 0 0 20rem 20rem;
+    }
+
+    // HOME 2
+    &__2 {
+        background-color: $second;
+        width: 100%;
+        height: 100vh;
+        color: white;
+        padding: 50rem 0;
+        @include flex;
+        margin-top: -20rem;
+
+        img {
+            width: 30%;
+            animation: imgUp 0.8s linear  infinite alternate;
+        }
+
+        div {
+            width: 50%;
+            @include flex;
+            flex-direction: column;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            line-height: 1.6;
+        }
+    }
+
+    // HOME 3
+    &__3 {
+        width: 100%;
+        height: 120vh;
+        background-color: $second;
+        margin-top: -20rem;
+        display: flex;
+        
+
+        div {
+            width: 70%;
+            height: 100vh;
+            background-color: $first;
+            @include flex;
+            flex-direction: column;
+            padding: 3rem;
+            border-radius: 0 20rem 20rem 0;
+            @include media(1200) {
+                min-height: 100%;
+            }
+            @include media(480) {
+                padding: 0;
+                width: 80%;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                width: 20rem;
+                border-bottom: 2px solid black;
+                padding: 0.8rem;
+                text-align: center;
+            }
+
+            p {
+                font: italic 100 1.8rem $text2;
+                line-height: 1.6;
+                letter-spacing: 1px;
+                word-spacing: 5px;
+                padding: 10rem;
+                @include media(900) {
+                    padding: 3rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    &__4 {
+        width: 100%;
+        height: 100vh;
+        background-color: $second;
+        @include flex(flex-end);
+        color: $first;
+
+        &> div {
+            background-color: $third;
+            width: 70%;
+            height: 70vh;
+            border-radius: 20rem 0 0 20rem;
+            @include flex;
+            flex-direction: column;
+            @include media(480) {
+                width: 80%;
+            }
+
+            &> h1 {
+                text-transform: uppercase;
+                width: 14rem;
+                padding: 0.8rem;
+                border-bottom: 2px solid $first;
+                text-align: center;
+            }
+            &> article {
+                @include flex;
+                margin: 3rem 0;
+                flex-wrap: wrap;
+                @include media(600) {
+                    width: 80%;
+                }
+
+                &> div {
+                    margin: 1.6rem;
+                    height: 16rem;
+                    width: 16rem;
+                    @include flex;
+                    flex-direction: column;
+                    color: $dark;
+                    background-color: $first;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    animation: imgUp 0.8s linear infinite alternate;
+
+                    @include media(600) {
+                        height: 10rem;
+                        width: 10rem;
+                    }
+
+                    &:hover {
+                        filter: invert(1);
+                    }
+
+                    &> svg {
+                        font-size: 6.4rem;
+                        @include media(600) {
+                            font-size: 4.4rem;
+                        }
+                    }
+                    &> p {
+                        font: 900 1.8rem $text2;
+                        @include media(600) {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+

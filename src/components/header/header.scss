@@ -1,0 +1,36 @@
+.navbar {
+    width: 100%;
+    padding: 1.6rem;
+    @include flex(space-between);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    background-color: $first;
+
+    h3 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        @include media(600) {
+            display: none
+        }
+    }
+    .nav__links {
+        @include flex(flex-end);
+        width: 70%;
+        @include media(600) {
+            width: 100%;
+            justify-content: space-between;
+        }
+        a {
+            margin: 0 1.6rem;
+            color: $dark;
+            font-size: 1.6rem;
+
+            &:hover {
+                color: $third;
+            }
+        }
+    }
+}
+

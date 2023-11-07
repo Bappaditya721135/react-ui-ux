@@ -1,0 +1,15 @@
+@import "./base/media.scss";
+@import "./base/base.scss";
+@import "./base/variable.scss";
+@import "./base/mixins.scss";
+@import "./base/animation.scss";
+
+// COMPONENTS 
+@import "../components/header/header.scss";
+@import "../components//home/home.scss";
+@import "../components//footer/footer.scss";
+@import "../components/contact/contact.scss";
+@import "../components/services/services.scss";
+
+
+
